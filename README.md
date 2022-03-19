@@ -1,4 +1,4 @@
-# yolov5_infer
+# YOLOv5 Inference Demo by OpenCV and OpenVINO
 Do the YOLOv5 model inference by OpenCV/OpenVINO based on onnx model format
 ### Installation
 Clone the repository
