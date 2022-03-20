@@ -79,8 +79,8 @@ def format_yolov5(frame):
 # 载入yolov5s onnx模型
 model_path = "./yolov5s.onnx"
 # Read yolov5s onnx model with OpenVINO API
-ie = IECore()
-exec_net = ie.load_network(network=model_path, device_name="CPU")
+ie = IECore()  #Initialize IECore
+net = ie.load_network(network=model_path, device_name="AUTO")
 
 # 开启Webcam，并设置为1280x720
 cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
@@ -100,7 +100,7 @@ while True:
     # 将图像按最大边1:1放缩
     inputImage = format_yolov5(frame)
     # 执行推理计算
-    outs = detect(inputImage, exec_net)
+    outs = detect(inputImage, net)
     # 拆解推理结果
     class_ids, confidences, boxes = wrap_detection(inputImage, outs[0])
 
