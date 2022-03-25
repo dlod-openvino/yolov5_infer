@@ -94,13 +94,13 @@ for device in devices:
 '''
 
 # net = ie.load_network(network=model_path, device_name="AUTO") # API version<=2021.4.2
-model_onnx = ie.read_model(model=model_path) # read model, API version>=2022.1
+# model_onnx = ie.read_model(model=model_path) # read model, API version>=2022.1
 # print(model_onnx.inputs) #Check the input nodes of the model
 # print(model_onnx.outputs) #Check the output nodes of the model
-net = ie.compile_model(model=model_onnx, device_name="AUTO")
+net = ie.compile_model(model=model_path, device_name="AUTO")
 
 # 开启Webcam，并设置为1280x720
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
