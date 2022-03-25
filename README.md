@@ -15,7 +15,8 @@ $ python export.py --weights yolov5s.pt --include onnx
 
 ### demo code
 + infer_by_opencv.py: do the inference by the OpenCV DNN module
-+ infer_by_openvino.py: do the inference by the OpenCV DNN module
++ infer_by_openvino.py: do the inference by the OpenVINO<=2021.4.2
++ infer_by_openvino2022.py: do the inference by the OpenVINO>=2022.1
 
 ### references
 + https://docs.ultralytics.com/quick-start/
