@@ -17,6 +17,7 @@ $ python export.py --weights yolov5s.pt --include onnx
 + infer_by_opencv.py: do the inference by the OpenCV DNN module
 + infer_by_openvino.py: do the inference by the OpenVINO<=2021.4.2
 + infer_by_openvino2022.py: do the inference by the OpenVINO>=2022.1
++ yolov5_ov2022.cpp: do the inference by the OpenVINO>=2022.1, C++ version
 + openvino2022-device-for-mqtt.py: push the inference result of OpenVINO>=2022.1 to EdgeX by MQTT
 
 ### references
