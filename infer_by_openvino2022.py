@@ -4,7 +4,6 @@ import cv2
 import numpy as np
 import time
 import yaml
-#from openvino.inference_engine import IECore # the version of openvino <= 2021.4.2
 from openvino.runtime import Core  # the version of openvino >= 2022.1
 
 # 载入COCO Label
@@ -20,8 +19,6 @@ INPUT_HEIGHT = 640
 def detect(image, net):
     blob = cv2.dnn.blobFromImage(image, 1 / 255.0, (INPUT_WIDTH, INPUT_HEIGHT), swapRB=True, crop=False)
     preds = net([blob])[next(iter(net.outputs))] # API version>=2022.1
-    #result = net.infer({"images": blob}) # API version<=2021.4.2
-    #preds = result["output"] # API version<=2021.4.2
     return preds
 
 # YOLOv5的后处理函数，解析模型的输出
@@ -79,31 +76,13 @@ def format_yolov5(frame):
     result[0:row, 0:col] = frame
     return result
 
-
 # 载入yolov5s onnx模型
 model_path = "./yolov5s.onnx"
-# Read yolov5s onnx model with OpenVINO API
-# ie = IECore()  #Initialize IECore version<=2021.4.2
 ie = Core() #Initialize Core version>=2022.1
-
-'''#List all the available devices
-devices = ie.available_devices
-for device in devices:
-    device_name = ie.get_property(device_name=device, name="FULL_DEVICE_NAME")
-    print(f"{device}: {device_name}")
-'''
-
-# net = ie.load_network(network=model_path, device_name="AUTO") # API version<=2021.4.2
-# model_onnx = ie.read_model(model=model_path) # read model, API version>=2022.1
-# print(model_onnx.inputs) #Check the input nodes of the model
-# print(model_onnx.outputs) #Check the output nodes of the model
 net = ie.compile_model(model=model_path, device_name="AUTO")
 
 # 开启Webcam，并设置为1280x720
 cap = cv2.VideoCapture(0)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
-
 # 调色板
 colors = [(255, 255, 0), (0, 255, 0), (0, 255, 255), (255, 0, 0)]
 
