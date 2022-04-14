@@ -76,8 +76,8 @@ def format_yolov5(frame):
     result[0:row, 0:col] = frame
     return result
 
-# 载入yolov5s onnx模型
-model_path = "./yolov5s.onnx"
+# 载入yolov5s xml or onnx模型
+model_path = "../yolov5s.xml"
 ie = Core() #Initialize Core version>=2022.1
 net = ie.compile_model(model=model_path, device_name="AUTO")
 
