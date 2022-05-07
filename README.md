@@ -26,3 +26,4 @@ $ python export.py --weights yolov5s.pt --include onnx
 + https://docs.ultralytics.com/quick-start/
 + https://github.com/ultralytics/yolov5/releases/tag/v6.1
 + https://docs.openvino.ai/latest/notebooks/002-openvino-api-with-output.html#
++ https://towardsdatascience.com/yolo-v4-or-yolo-v5-or-pp-yolo-dad8e40f7109
