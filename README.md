@@ -17,7 +17,9 @@ $ python export.py --weights yolov5s.pt --include onnx
 + infer_by_opencv.py: do the inference by the OpenCV DNN module
 + infer_by_openvino.py: do the inference by the OpenVINO<=2021.4.2
 + infer_by_openvino2022.py: do the inference by the OpenVINO>=2022.1
-+ yolov5_ov2022.cpp: do the inference by the OpenVINO>=2022.1, C++ version
++ test_env.cpp: test the VS2019 development environment based on OpenVINO>=2022.1 and OpenCV, C++ version
++ yolov5_ov2022_cam.cpp: sample code about do the yolov5 inference by USB camera. OpenVINO>=2022.1 C++ version
++ yolov5_ov2022_image.cpp:sample code about do the yolov5 inference on one image. OpenVINO>=2022.1 C++ version
 + openvino2022-device-for-mqtt.py: push the inference result of OpenVINO>=2022.1 to EdgeX by MQTT
 
 ### references
