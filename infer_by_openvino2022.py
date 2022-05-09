@@ -68,7 +68,7 @@ def wrap_detection(input_image, output_data):
 
     return result_class_ids, result_confidences, result_boxes
 
-# 按照YOLOv5要求，先将图像长:宽 = 1:1，多余部分填充黑边
+# 按照YOLOv5 letterbox resize的要求，先将图像长:宽 = 1:1，多余部分填充黑边
 def format_yolov5(frame):
     row, col, _ = frame.shape
     _max = max(col, row)
