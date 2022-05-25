@@ -8,7 +8,7 @@ from openvino.runtime import Core
 from utils.augmentations import letterbox
 
 # 模型地址一定要和测试阶段选择的模型地址一致！！！
-model_path='yolov5s.xml'   
+model_path='/project/train/models/train/exp4/weights/best.onnx'   
 
 core = Core()
 
