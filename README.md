@@ -21,6 +21,8 @@ $ python export.py --weights yolov5s.pt --include onnx
 + yolov5_ov2022_cam.cpp: sample code about do the yolov5 inference by USB camera. OpenVINO>=2022.1 C++ version
 + yolov5_ov2022_image.cpp:sample code about do the yolov5 inference on one image. OpenVINO>=2022.1 C++ version
 + openvino2022-device-for-mqtt.py: push the inference result of OpenVINO>=2022.1 to EdgeX by MQTT
++ ov_cvmart_sample.ipynb: cvmart newbie task OpenVINO>=2022.1 sample [基于YOLOv5的新手任务](https://www.cvmart.net/document)
++ ji.py: cvmart newbie task, auto test script.[基于YOLOv5的新手任务,编写测试脚本](https://www.cvmart.net/document)
 
 ### references
 + https://docs.ultralytics.com/quick-start/
