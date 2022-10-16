@@ -25,7 +25,8 @@ $ python export.py --weights yolov5s.pt --include onnx
 + preprocessing_with_saving_to_IR.py: sample code about export the IR model with preprocessing
 + openvino2022-device-for-mqtt.py: push the inference result of OpenVINO>=2022.1 to EdgeX by MQTT
 + ov_cvmart_sample.ipynb: cvmart newbie task OpenVINO>=2022.1 sample [基于YOLOv5的新手任务](https://www.cvmart.net/document)
-+ yolov5_ov2022_sync_dGPU.py: do the yolov5 inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
++ yolov5_ov2022_sync_dGPU.py: do the yolov5 Sync inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
++ yolov5_ov2022_async_dGPU.py: do the yolov5 Async inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
 + ji.py: cvmart newbie task, auto test script.[基于YOLOv5的新手任务,编写测试脚本](https://www.cvmart.net/document)
 
 ### references
