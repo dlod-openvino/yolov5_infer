@@ -29,6 +29,7 @@ $ python export.py --weights yolov5s.pt --include onnx
 + yolov5_ov2022_async_dGPU.py: do the yolov5 Async inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
 + ji.py: cvmart newbie task, auto test script.[基于YOLOv5的新手任务,编写测试脚本](https://www.cvmart.net/document)
 + yolov5seg_ov2022_sync_dGPU.py: yolov5 instance segmentation sample code by >=OpenVINO2022.2 on Intel A770
++ yolov5_async_infer_queue.py: YOLOv5 Async Infer based on OpenVINO AsyncInferQueue
 
 ### references
 + https://docs.ultralytics.com/quick-start/
