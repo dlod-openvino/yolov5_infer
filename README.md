@@ -30,6 +30,7 @@ $ python export.py --weights yolov5s.pt --include onnx
 + ji.py: cvmart newbie task, auto test script.[基于YOLOv5的新手任务,编写测试脚本](https://www.cvmart.net/document)
 + yolov5seg_ov2022_sync_dGPU.py: yolov5 instance segmentation sample code by >=OpenVINO2022.2 on Intel A770
 + yolov5_async_infer_queue.py: YOLOv5 Async Infer based on OpenVINO AsyncInferQueue
++ yolov5_openvino_sync_dGPU.cpp: YOLOv5 Sync Infer C++ Demo on intel discreate GPU(A770)
 
 ### references
 + https://docs.ultralytics.com/quick-start/
