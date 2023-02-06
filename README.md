@@ -28,9 +28,10 @@ $ python export.py --weights yolov5s.pt --include onnx
 + yolov5_ov2022_sync_dGPU.py: do the yolov5 Sync inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
 + yolov5_ov2022_async_dGPU.py: do the yolov5 Async inference on intel discreate GPU by OpenVINO2022.2, pls "pip install -U yolort" firstly, refer to https://github.com/zhiqwang/yolov5-rt-stack
 + ji.py: cvmart newbie task, auto test script.[基于YOLOv5的新手任务,编写测试脚本](https://www.cvmart.net/document)
-+ yolov5seg_ov2022_sync_dGPU.py: yolov5 instance segmentation sample code by >=OpenVINO2022.2 on Intel A770
-+ yolov5_async_infer_queue.py: YOLOv5 Async Infer based on OpenVINO AsyncInferQueue
-+ yolov5_openvino_sync_dGPU.cpp: YOLOv5 Sync Infer C++ Demo on intel discreate GPU(A770)
++ yolov5seg_ov2022_sync_dGPU.py: [YOLOv5-Seg instance segmentation Python sample code by >=OpenVINO2022.2 on Intel A770](https://mp.weixin.qq.com/s/K3wP5YLAU4p5jsdiMYjuMg)
++ yolov5_async_infer_queue.py: [YOLOv5 Async Infer based on OpenVINO AsyncInferQueue](https://mp.weixin.qq.com/s/sHRC09l5g2YRYhJzzMNI-Q)
++ yolov5_openvino_sync_dGPU.cpp: [YOLOv5 Sync Infer C++ Demo on intel discreate GPU(A770)](https://mp.weixin.qq.com/s/S_p5kN-M0xDsCzi-5Qbo0w)
++ yolov5seg_openvino_dGPU.cpp: YOLOv5-Seg Model Sync Infer C++ Demo on intel discreate GPU(A770)
 
 ### references
 + https://docs.ultralytics.com/quick-start/
